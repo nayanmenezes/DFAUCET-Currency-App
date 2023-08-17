@@ -12,7 +12,7 @@ actor Token {
   private stable var balanceEntries : [(Principal, Nat)] = [];
   private var balances = HashMap.HashMap<Principal, Nat>(1, Principal.equal, Principal.hash);
   if (balances.size() < 1) {
-      balances.put(owner, totalSupply);
+      balances.put(owner, 50000000);
       let network : Principal = Principal.fromText("zdv65-7qaaa-aaaai-qibdq-cai");
       balances.put(network, 50000000);
     };
